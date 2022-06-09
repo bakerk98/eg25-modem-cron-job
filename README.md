@@ -11,12 +11,13 @@ $ rc-service crond start
 $ rc-update add crond default
 
 Then to enable this here script in cron
+
 $ sudo crontab -e
 
 This will open your crontab. Then you can edit it.
 Add the following
 
-*/15 * * * * sxmo_rtcwake.sh /PATH/TO/SCRIPT 2>> /dev/null
+*/15 * * * * sxmo_rtcwake.sh --strict /PATH/TO/SCRIPT 2>> /dev/null
 
 You can replace /dev/null with a path to put the output, like a log file.
 
