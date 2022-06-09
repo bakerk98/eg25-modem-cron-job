@@ -2,7 +2,11 @@
 
 #should be run as root btw
 restartEG25() {
-    rc-service eg25-manager restart
+    if command -v rc-update; then
+        rc-service eg25-manager restart
+    else
+        systemctl restart eg25-manager
+    fi
 }
 
 allGood() {
