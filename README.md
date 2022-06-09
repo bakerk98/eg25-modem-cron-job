@@ -16,7 +16,10 @@ $ sudo crontab -e
 This will open your crontab. Then you can edit it.
 Add the following
 
-*/15 * * * * /PATH/TO/SCRIPT
+*/15 * * * * sxmo_rtcwake.sh /PATH/TO/SCRIPT 2>> /dev/null
+
+You can replace /dev/null with a path to put the output, like a log file.
+
 
 Replacing /PATH/TO/SCRIPT to where your script is.
 
