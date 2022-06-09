@@ -2,7 +2,7 @@
 
 #should be run as root btw
 restartEG25() {
-    rc-service restart eg25-manager
+    rc-service eg25-manager restart
 }
 
 allGood() {
