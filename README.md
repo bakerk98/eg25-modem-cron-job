@@ -5,7 +5,9 @@ This should be run as root, because the rc-service command needs root priveleges
 If using systemd, replace the line using rc-service to one using systemctl
 
 To enable cron in SXMO, use 
+
 $ rc-service crond start
+
 $ rc-update add crond default
 
 Then to enable this here script in cron
